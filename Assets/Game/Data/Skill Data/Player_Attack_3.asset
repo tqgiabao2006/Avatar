@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c843c8af4e043b9abd52304c4084ff, type: 3}
+  m_Name: Player_Attack_3
+  m_EditorClassIdentifier: 
+  damge: 0
+  CoolDown: 0
+  cost: 0
+  attackType: 0
+  canActivate: 0
+  animationClip: {fileID: 7400000, guid: 7759da85da8e4404ab1af034a15fa1c4, type: 2}
