@@ -163,9 +163,7 @@ public class PlayerController : Core
     public bool isDashing = false;
 
     #endregion
-    #region Real State Machine
 
-    #endregion
     #region Moveable Platform
     [Header("Moveable Platform Variables")]
     [SerializeField] public string _objectTag = "MoveablePlatform";
@@ -307,30 +305,12 @@ public class PlayerController : Core
 
 
 
-    #region History Code
+    
 
-    // if(_onWall  && !_isJumping)
-    // {  
-    //     _machine.Set(_onWall_State);
 
-    // }
 
-    // if(_onGround && !_isJumping)
-    // {
-    //       
-    //      ApplyGroundLinearDrag();
-    //      _isJumping = false;
-    //       _extraJumpsValue =  _extraJumps;
-    //        _hangTimeCounter =  _hangTime;
-    //       _playerController._hasDashed = false; 
 
-    // }
-    //   if (_canJump && !_onWall && !_isJumping && _onGround)  //&& !_onWall && !_isJumping
-    //    {  
-    //     _machine.Set(_onAir_State);
-    //     _hangTimeCounter -= Time.deltaTime;
 
-    //    }
 
 
 
@@ -340,211 +320,7 @@ public class PlayerController : Core
 
 
 
-
-
-
-
-
-
-
-
-
-
-    // // _oldState = _state;
-    // if(_onMoveablePlatform && Input.GetKeyDown(KeyCode.E)) 
-    // { _rb.velocity = Vector2.zero;
-    //   _machine.Set(_movePlatform_state);
-    // }
-    // // else
-    // // {
-
-    // if(_rb.velocity.y <0 && !_onMoveablePlatform )
-    // {
-    //     _machine.Set(_fall_State);
-    // }
-
-
-    //    public void StickToWall()
-    //     {
-
-    //         if(_wallGrab || _wallSlide)
-    //         {
-    //             if(_horizontalDirection > 0f)
-    //             {
-    //                   Vector3 _scale = this.transform.localScale;
-    //             _scale.x = 1;
-    //             this.transform.localScale = _scale;
-    //                         _facingRight = true;
-    //             }else if(_horizontalDirection <0f)
-    //             {
-    //                  Vector3 _scale = this.transform.localScale;
-    //             _scale.x = -1;
-    //             this.transform.localScale = _scale;
-    //             _facingRight = false;
-
-    //             }
-
-    //         }
-
-
-
-
-
-
-
-    // if (_canDash)
-    // {
-    //     _machine.Set(_dash_State);
-    // }
-    // if (!_isDashing && !_canDash)
-    // {   
-    //     if (_canMove && _groundCensor._onGround && _rb.velocity.y ==0)
-    //     {
-    //         if(GetInput().x != 0) _machine.Set(_run_State) ;
-    //         else if(GetInput().x == 0) _machine.Set(_idle_State);
-    //     }
-    //     else _rb.velocity = Vector2.Lerp(_rb.velocity, (new Vector2(_horizontalDirection * _maxMoveSpeed, _rb.velocity.y)), .5f * Time.deltaTime);
-    //     if (_groundCensor._onGround)
-    //     {
-    //         ApplyGroundLinearDrag();
-    //         _extraJumpsValue = _extraJumps;
-    //         _hangTimeCounter = _hangTime;
-    //         _hasDashed = false;
-    //     }
-    //     else
-    //     {
-    //         ApplyAirLinearDrag();
-    //         FallMultiplier();
-    //         _hangTimeCounter -= Time.fixedDeltaTime;
-    //         if (!_onWall || _rb.velocity.y < 0f || _wallRun) _isJumping = false;
-    //     }
-
-    //     if (_canJump)
-    //     {
-    //         if (_onWall && !_groundCensor._onGround)
-    //         {
-    //              if( !_wallRun&& (((_facingRight  && _onRightWall) || (!_facingRight && !_onRightWall))))
-    //             {
-    //               _machine.Set(_neutralJump_State);
-    //                _isJumping = true;
-
-
-    //             }else{
-    //                 _machine.Set(_wallJump_State);
-    //                                        _isJumping = true;
-
-    //             }
-
-    //         }
-    //         else
-    //         {
-    //              _machine.Set(_air_State); 
-    //             _isJumping = true;
-
-    //         }
-    //     }
-    //     if (!_isJumping)
-    //     {
-    //         if (_wallGrab)
-    //         {
-    //           _machine.Set(_wallGrab_State);
-    //           StickToWall();
-    //         }else if (_wallSlide && _onMoveablePlatform) 
-    //         {
-    //             _machine.Set( _wallSlide_State);
-    //             StickToWall();
-    //         }
-    //         else if (_wallRun) 
-    //         {
-
-    //             _machine.Set(_wallRun_State);
-
-    //         }
-
-    //     }
-    //        }
-
-
-
-    // }
-
-    // if(_oldState != _state || _oldState._isComplete)
-    // {
-    //     _oldState.Exit();
-    //     _state.Initialise();
-    //     _state.Enter();
-
-    // }
-
-    // private void StateSetUp()
-    // { 
-    //     _fall_State.SetUp(_anim, this);
-    //    _idle_State.SetUp(_anim, this);
-    //    _run_State. SetUp(_anim, this);
-    //    _air_State. SetUp( _anim, this);
-    //    _neutralJump_State.SetUp( _anim, this);
-    //      _wallJump_State.SetUp( _anim, this);   
-    //      _wallGrab_State.SetUp( _anim,this);
-    //      _dash_State.SetUp(_anim, this);
-    //     _wallRun_State.SetUp(   _anim, this);
-    //     _wallSlide_State.SetUp(_anim,this);
-    //     _movePlatform_state.SetUp(_anim, this);
-
-    // }
-
-
-
-    // if(_wallGrab &&(!Input.GetButton("Jump") || !Input.GetKey(KeyCode.UpArrow)) || !_isDashing)
-    // {
-    //     _rb.gravityScale = _fallMultiplier;
-    // }
-    // if (_verticalDirection < 0f)
-    // {
-    //     _rb.gravityScale = _downMultiplier;
-    // }
-    // else
-    // {
-    //     if (_rb.velocity.y < 0)
-    //     {
-    //         _rb.gravityScale = _fallMultiplier;
-    //     }
-    //     //  else if (_rb.velocity.y > 0 && (!Input.GetButton("Jump") || !Input.GetKey(KeyCode.UpArrow)))
-    //     // {
-    //     //     _rb.gravityScale = _lowJumpFallMultiplier;
-    //     // }else
-    //     // {
-
-    //     //     _rb.gravityScale = _fallMultiplier;
-
-    //     // }
-    // }
-
-
-
-
-
-    // _onMoveablePlatform = Physics2D.Raycast(transform.position + _groundRaycastOffset, Vector2.down, _groundRaycastLength, _moveablePlatformLayer) ||
-    //             Physics2D.Raycast(transform.position, Vector2.right, _groundRaycastLength,_moveablePlatformLayer) ||
-    //             Physics2D.Raycast(transform.position, Vector2.left, _groundRaycastLength,_moveablePlatformLayer);
-
-
-
-
-
-    // private void OnCollisionStay2D(Collision2D other) 
-    // {   if(other.collider.gameObject.CompareTag("MoveablePlatform"))
-    //     {
-
-    //        if(_state == _movePlatform_state)
-    //        {
-    //          other.transform.SetParent(this.transform);
-    //        }
-    //     }
-
-    // }
-
-    #endregion
-
+    
     #endregion
 
 
