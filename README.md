@@ -1,6 +1,4 @@
-# 🔥Ming, The story of a greate elementalist - *Celeste-inspired 2D Platformer*
-
-![MingLogo](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/MingPoster.png)
+# 🔥 Ming: The Story of a Great Elementalist - *A Celeste-Inspired 2D Platformer*
 
 [![Unity](https://img.shields.io/badge/Made_with-Unity-000?logo=unity&style=for-the-badge)](https://unity.com/)  
 [![GitHub Repo](https://img.shields.io/badge/View_on-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/tqgiabao2006/Avatar)
@@ -8,27 +6,29 @@
 ---
 
 ## 🚀 Game Overview  
-**Ming, The story of a greate elementalistis** is an ambitious 2D platformer project that combine two major sucess of both 3D and 2D game industry Elden Ring, and Celeste. It creates a dynamic boss fight with high difficulty and diverse combo skills, moveset, character forms.
+**Ming: The Story of a Great Elementalist** is an ambitious 2D platformer that combines the successes of both the 3D and 2D game industries—*Elden Ring* and *Celeste*. It features dynamic boss fights with high difficulty, diverse combo skills, a fluid moveset, and multiple character transformations.
 
 ### 🎯 Key Features
-- ⚙️ **State Machine** – Manage different states of a character, and animations.
-- 🏃 **Dynamic Movement Mechanics** - Small, effective hidden mechanics that make character's movement smoother and more responsive
-- 📐 **Custom Physics System**
-- 🎨 **Self-made Pixel Art Asset**
+- ⚙️ **State Machine** – Manages different character states and animations efficiently.
+- 🏃 **Dynamic Movement Mechanics** – Small but effective hidden mechanics that make character movement smoother and more responsive.
+- 📐 **Custom Physics System** – Designed for a unique and polished gameplay experience.
+- 🎨 **Self-Made Pixel Art Assets** – All in-game art is handcrafted.
+
 ---
 
-### 📌 Details
+## 📌 Details
 
-#### **1. ⚙️State Machine**
-**Overview**
-The **State Machine Pattern** is a behavioral design pattern that allows an object to change its behavior when its internal state changes. It is commonly used in game development, AI, and UI systems.
+### **1. ⚙️ State Machine**
+#### **Overview**
+The **State Machine Pattern** is a behavioral design pattern that allows an object to change its behavior dynamically based on its internal state. It is commonly used in game development, AI, and UI systems.
 
-**Key Components**
+#### **Key Components**
 - **State**: Represents a specific mode of behavior.
 - **Context**: The main object that holds the current state and delegates behavior to it.
-- **Transitions**: Rules defining how and when states change.
-- **State Interface**: Defines common behavior for all states.
+- **Transitions**: Define the rules for changing states.
+- **State Interface**: Standardizes behavior across different states.
 
+```csharp
 public interface IState {
     void Enter();
     void Update();
@@ -52,42 +52,37 @@ public class StateMachine {
 
     public void Update() => currentState?.Update();
 }
-**How it is implented in Ming ?**
-- **State** class stores its own logic of movement in **Do()**, and necessary data is given and clear through **Enter()**, **Exit()** .
-- Use **Delegate** to wrap a predicate function that decide whether can change states or not.
-- Attach to player's character a **Sensor** part, can determine whether the character is on ground, wall, or not, offering enhanced scalability and flexibity
+```
 
-![StateVideo](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/BloodVein_Grid.png)
+### **How is it implemented in Ming?**
+- The **State** class stores its own movement logic in **Do()**, with necessary data provided and cleared through **Enter()** and **Exit()**.
+- Uses **Delegates** to wrap predicate functions that determine whether state transitions are allowed.
+- The player's character has a **Sensor** component that detects whether the character is on the ground, a wall, or in the air, enhancing scalability and flexibility.
 
-
-**Why I used it ?**
+**Why did I use it?**
 - **Encapsulates** behavior per state.
-- Improves **maintainability and scalabilty** by separating concerns.
+- Improves **maintainability and scalability** by separating concerns.
 - Simplifies debugging by isolating state logic.
-- Fully control animation with code
+- Provides **full animation control** through code.
 
 ---
 
-#### 2.🏃 **Dynamic Movement Mechanics** 
-- **3-phased running**
-  - The player's movement divides into 3 main phases: acceleration, max speed, decelleration.
-  - I controlled it by increase and decrease **ground drag** (ground friction) and have **min speed** and **max speed** variables.
+### **🏃 Dynamic Movement Mechanics** 
+#### **1. 3-Phased Running**
+- The player's movement is divided into three main phases: **acceleration, max speed, and deceleration**.
+- This is controlled by dynamically adjusting **ground drag** (ground friction) and setting **minimum and maximum speed** values.
 
-![RunState.PNG](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Enum%20Direction.png)
+#### **2. Dynamic Jumping Forces**
+- **Jump State:** The player's jump consists of three phases: **Jump, Max Height, and Fall**.
+- **Dynamic Jump Force:** The jump force varies depending on how long the player holds the space key.
+- **Air Control:** Adds an **anti-gravity time** at the peak of the jump, allowing smoother aerial movement.
+- **Fast Fall:** Gradually increases gravity to pull the character down quickly, avoiding a floating feeling.
+- **Coyote Time:** Adds a **0.2s buffer**, allowing the player to jump even if they have just fallen off a platform.
+- **Jump Buffering:** Allows players to queue a jump just before landing, making jumping more responsive.
+- **Double/Triple Jump:** Enables multi-jump mechanics.
+- **Wall Jump:** Allows jumping off walls.
+- **Animation Alignment with Jump:** Ensures animations sync properly with movement.
 
-![Movement.GIF](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Get%20direction.png)
-
-
-- **Dynamic jumping forces**
-  - **Jump state**: Player's Jump divides into 3 main phases: Jump, max height, fall.
-  - **Dynamic jump force**: The jump force vary depends on how long player hold the space key
-  - **Air control**: Add anti-gravity time on the max heigh phase, creating a air control feeling for player
-  - **Fast fall**: Gradually increase gravity force to pull character down fast, avoiding a floating-feeling on a jump
-  - **Coyote time**: Add a buffer time (0.2s) that player still can jump even fall off the platform to correct use
-  - **Jump Buffering**: Player can jump near the ground, not neceessary to touch the ground, avoid perfect timing jump, make jump more respsonsive
-  - **Double/Triple Jump**
-  - **Wall Jump**
-  - **Animation allign with Jump**
 
 ![Jump.PNG](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Smooth%20curve.png)
 
