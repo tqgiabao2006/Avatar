@@ -108,7 +108,7 @@ public class StateMachine {
 ![Idle.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Idle.gif)
 
 
-![Attack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Attack.gif)]
+![Attack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Attack.gif)
 
 
 ![JumpAttack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/JumAttack.gif)
