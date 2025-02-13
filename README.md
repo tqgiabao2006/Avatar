@@ -1,7 +1,11 @@
 # 🔥 Ming: The Story of a Great Elementalist - *A Celeste-Inspired 2D Platformer*
 
+
+![MingLogo](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/MingPoster.png)
+
 [![Unity](https://img.shields.io/badge/Made_with-Unity-000?logo=unity&style=for-the-badge)](https://unity.com/)  
 [![GitHub Repo](https://img.shields.io/badge/View_on-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/tqgiabao2006/Avatar)
+
 
 ---
 
@@ -65,12 +69,18 @@ public class StateMachine {
 - Simplifies debugging by isolating state logic.
 - Provides **full animation control** through code.
 
+
+![FMS](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/FSM.gif)
+
 ---
 
 ### **🏃 Dynamic Movement Mechanics** 
 #### **1. 3-Phased Running**
 - The player's movement is divided into three main phases: **acceleration, max speed, and deceleration**.
 - This is controlled by dynamically adjusting **ground drag** (ground friction) and setting **minimum and maximum speed** values.
+
+![Run GIF ](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Movement.gif)
+
 
 #### **2. Dynamic Jumping Forces**
 - **Jump State:** The player's jump consists of three phases: **Jump, Max Height, and Fall**.
@@ -84,9 +94,9 @@ public class StateMachine {
 - **Animation Alignment with Jump:** Ensures animations sync properly with movement.
 
 
-![Jump.PNG](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Smooth%20curve.png)
+![Jump.PNG](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Jump.png)
 
-![Jump.GIF]()
+![Jump.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Jump.gif)
 
 - **Skill Combo**
   + Have a wait time, if player still click, the animator skip the first attack move to second attack if not reset the counter
@@ -97,25 +107,25 @@ public class StateMachine {
 
 **Player Animations**
 
-![Idle.GIF](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/ECS.png)
+![Idle.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Idle.gif)
 *Idle animation*
 
-![Attack.GIF](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/ECS.png)]
+![Attack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Attack.gif)]
 *Attack animation*
 
-![JumpAttack.GIF](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/ECS.png)
+![JumpAttack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/JumAttack.gif)
 *Jump Attack animation*
 
-![WallClimb.GIF](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/ECS.png)
+![WallClimb.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Wall%20Climb.gif)
 *Wall Climb animation*
 
-![32x32TileSet](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/ECS.png)
+![32x32TileSet](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/32x32Dirt..png)
 *Tile set*
 
 
 ---
 ## 🎥 Demo Gameplay Video
-![Gameplay Preview](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Gameplay.gif)
+![Gameplay Preview](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/GamePlay.gif)
 
 ---
 
