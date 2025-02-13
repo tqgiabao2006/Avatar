@@ -111,15 +111,19 @@ public class StateMachine {
 *Idle animation*
 
 ![Attack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Attack.gif)]
+
 *Attack animation*
 
 ![JumpAttack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/JumAttack.gif)
+
 *Jump Attack animation*
 
 ![WallClimb.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Wall%20Climb.gif)
+
 *Wall Climb animation*
 
 ![32x32TileSet](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/32x32Dirt..png)
+
 *Tile set*
 
 
@@ -144,10 +148,9 @@ public class StateMachine {
 ---
 
 ## 🚧 Development Roadmap  
-🔹 **[ ] Boss Fight** – Advanced AI Boss.  
+🔹 **[ ] Boss Fight** – Advanced AI Boss
 🔹 **[ ] Interactive Obstacle**
 🔹 **[ ] Dynamic Environment**  
-
 ---
 
 ## 🏆 Contributors & Credits  
