@@ -105,26 +105,24 @@ public class StateMachine {
 
 #### **3. 🎨 **Self-made Pixel Art Asset***
 
-**Player Animations**
-
+**Idle animation**
 ![Idle.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Idle.gif)
-*Idle animation*
 
+
+**Attack animation**
 ![Attack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Attack.gif)]
 
-*Attack animation*
-
+**Jump Attack animation**
 ![JumpAttack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/JumAttack.gif)
 
-*Jump Attack animation*
 
+**Wall Climb animation**
 ![WallClimb.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Wall%20Climb.gif)
 
-*Wall Climb animation*
 
+**Tile set**
 ![32x32TileSet](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/32x32Dirt..png)
 
-*Tile set*
 
 
 ---
