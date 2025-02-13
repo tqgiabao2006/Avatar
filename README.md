@@ -105,22 +105,18 @@ public class StateMachine {
 
 #### **3. 🎨 **Self-made Pixel Art Asset***
 
-**Idle animation**
 ![Idle.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Idle.gif)
 
 
-**Attack animation**
 ![Attack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Attack.gif)]
 
-**Jump Attack animation**
+
 ![JumpAttack.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/JumAttack.gif)
 
 
-**Wall Climb animation**
 ![WallClimb.GIF](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/Wall%20Climb.gif)
 
 
-**Tile set**
 ![32x32TileSet](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/32x32Dirt..png)
 
 
@@ -144,12 +140,14 @@ public class StateMachine {
 📦 **Developing**
 
 ---
-
 ## 🚧 Development Roadmap  
-🔹 **[ ] Boss Fight** – Advanced AI Boss
-🔹 **[ ] Interactive Obstacle**
+
+🔹 **[ ] Boss Fight** – Advanced AI Boss  
+🔹 **[ ] Interactive Obstacle**  
 🔹 **[ ] Dynamic Environment**  
----
+
+---  
+
 
 ## 🏆 Contributors & Credits  
 👨‍💻 **Ben** (*Mad Scientist of Game Lab*) – Solo Developer  
