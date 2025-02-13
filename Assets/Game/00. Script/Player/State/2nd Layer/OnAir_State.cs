@@ -67,12 +67,7 @@ public class OnAir_State : State_Base
         }
         
      
-           
-
         
-           
-    
-
     }
     public override void InExit()
     {   

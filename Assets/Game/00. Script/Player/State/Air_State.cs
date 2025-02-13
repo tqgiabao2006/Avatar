@@ -66,7 +66,6 @@ public class Air_State : State_Base
         {
             adjustedJumpForce = _playerController._jumpForce;
         }
-
         
         if (!_playerController._onGround  && !_playerController._onWall && !_playerController._canJump)
         {
@@ -82,9 +81,6 @@ public class Air_State : State_Base
          _playerController.holdTime = 0f;
 
        _playerController._isJumping = true;
-
-       
-
     }
 
     IEnumerator Waiting()
