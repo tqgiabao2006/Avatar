@@ -1,6 +1,4 @@
-# 🔥Ming, The story of a greate elementalist - *Celeste-inspired 2D Platformer*
-
-![MingLogo](https://github.com/tqgiabao2006/Avatar/raw/main/ReadMe/MingPoster.png)
+# 🔥 Ming: The Story of a Great Elementalist - *A Celeste-Inspired 2D Platformer*
 
 [![Unity](https://img.shields.io/badge/Made_with-Unity-000?logo=unity&style=for-the-badge)](https://unity.com/)  
 [![GitHub Repo](https://img.shields.io/badge/View_on-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/tqgiabao2006/Avatar)
@@ -8,27 +6,29 @@
 ---
 
 ## 🚀 Game Overview  
-**Ming, The story of a greate elementalistis** is an ambitious 2D platformer project that combine two major sucess of both 3D and 2D game industry Elden Ring, and Celeste. It creates a dynamic boss fight with high difficulty and diverse combo skills, moveset, character forms.
+**Ming: The Story of a Great Elementalist** is an ambitious 2D platformer that combines the successes of both the 3D and 2D game industries—*Elden Ring* and *Celeste*. It features dynamic boss fights with high difficulty, diverse combo skills, a fluid moveset, and multiple character transformations.
 
 ### 🎯 Key Features
-- ⚙️ **State Machine** – Manage different states of a character, and animations.
-- 🏃 **Dynamic Movement Mechanics** - Small, effective hidden mechanics that make character's movement smoother and more responsive
-- 📐 **Custom Physics System**
-- 🎨 **Self-made Pixel Art Asset**
+- ⚙️ **State Machine** – Manages different character states and animations efficiently.
+- 🏃 **Dynamic Movement Mechanics** – Small but effective hidden mechanics that make character movement smoother and more responsive.
+- 📐 **Custom Physics System** – Designed for a unique and polished gameplay experience.
+- 🎨 **Self-Made Pixel Art Assets** – All in-game art is handcrafted.
+
 ---
 
-### 📌 Details
+## 📌 Details
 
-#### **1. ⚙️State Machine**
-**Overview**
-The **State Machine Pattern** is a behavioral design pattern that allows an object to change its behavior when its internal state changes. It is commonly used in game development, AI, and UI systems.
+### **1. ⚙️ State Machine**
+#### **Overview**
+The **State Machine Pattern** is a behavioral design pattern that allows an object to change its behavior dynamically based on its internal state. It is commonly used in game development, AI, and UI systems.
 
-**Key Components**
+#### **Key Components**
 - **State**: Represents a specific mode of behavior.
 - **Context**: The main object that holds the current state and delegates behavior to it.
-- **Transitions**: Rules defining how and when states change.
-- **State Interface**: Defines common behavior for all states.
+- **Transitions**: Defines the rules for changing states.
+- **State Interface**: Standardizes behavior across different states.
 
+```csharp
 public interface IState {
     void Enter();
     void Update();
@@ -52,6 +52,9 @@ public class StateMachine {
 
     public void Update() => currentState?.Update();
 }
+
+\```
+
 **How it is implented in Ming ?**
 - **State** class stores its own logic of movement in **Do()**, and necessary data is given and clear through **Enter()**, **Exit()** .
 - Use **Delegate** to wrap a predicate function that decide whether can change states or not.
