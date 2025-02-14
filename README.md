@@ -157,6 +157,6 @@ public class StateMachine {
 ---
 
 ## ⭐ Support & Feedback  
-💬 **Have feedback?** Open an [issue](https://github.com/tqgiabao2006/blood-vein/issues) or contact me via email: tqgiabao2006@gmail.com.  
+💬 **Have feedback?** Open an [issue](https://github.com/tqgiabao2006/Ming-Greate-Elementalist/issues) or contact me via email: tqgiabao2006@gmail.com.  
 🎮 **Follow my journey:** [🔗 Portfolio](https://your-portfolio-link.com)  
 
